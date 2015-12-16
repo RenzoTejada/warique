@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.putencio.warique.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!-- inputType es el tipo de teclado que se visualizara -->
+        <TextView
+            android:id="@+id/txtBienvenida"
+            android:textSize="@dimen/size_bienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bienvenido"/>
+
+        <TextView
+            android:id="@+id/txta"
+            android:gravity="center"
+            android:textSize="@dimen/size_bienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="a"/>
+
+        <TextView
+            android:id="@+id/txtWarique"
+            android:gravity="right"
+            android:textSize="@dimen/size_Warique"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/app_name" />
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/ver_warique" />
+    </LinearLayout>
+
+</FrameLayout>
