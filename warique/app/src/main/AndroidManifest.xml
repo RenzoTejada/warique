@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListadoActivity"></activity>
+        <activity android:name=".DetalleActivity"></activity>
+        <activity android:name=".ReservarActivity"></activity>
         <activity android:name=".ReservacionActivity"></activity>
     </application>
 
