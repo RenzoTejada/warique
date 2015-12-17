@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="size_bienvenida">46dp</dimen>
     <dimen name="size_Warique">66dp</dimen>
+    <dimen name="item">100dp</dimen>
 </resources>

@@ -3,4 +3,6 @@
     <string name="bienvenido">Bienvenido</string>
     <string name="ver_warique">Ver Warique</string>
     <string name="ver_reserva">Ver Reserva</string>
+    <string name="atras">Atras</string>
+    <string name="salir">Salir</string>
 </resources>
