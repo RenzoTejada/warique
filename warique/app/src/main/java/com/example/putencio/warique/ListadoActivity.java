@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import com.example.putencio.adapters.GrillaAdapter;
@@ -13,6 +14,8 @@ import com.example.putencio.models.DetalleImagen;
 import java.util.ArrayList;
 
 public class ListadoActivity extends AppCompatActivity {
+
+    private Button btnAtras;
 
     private GridView gvGrilla;
     public static ArrayList<DetalleImagen> lista = new ArrayList<>();
@@ -23,6 +26,7 @@ public class ListadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
 
+        btnAtras = (Button)findViewById(R.id.btnAtras);
         gvGrilla = (GridView) findViewById(R.id.gvGrilla);
 
         for (int i = 101; i < 111; i++) {
@@ -37,6 +41,14 @@ public class ListadoActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        btnAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         gvGrilla.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

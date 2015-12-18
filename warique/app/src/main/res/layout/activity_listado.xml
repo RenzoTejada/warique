@@ -4,10 +4,11 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/txtAtras"
+        android:id="@+id/btnAtras"
         android:text="@string/atras"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
+
 
     <GridView
         android:id="@+id/gvGrilla"
@@ -19,11 +20,5 @@
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
         android:verticalSpacing="2dp"></GridView>
-
-    <Button
-        android:id="@+id/txtSalir"
-        android:text="@string/salir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>
