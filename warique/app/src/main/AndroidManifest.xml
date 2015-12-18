@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListadoActivity"></activity>
-        <activity android:name=".DetalleActivity" android:screenOrientation="landscape"></activity>
+        <activity android:name=".DetalleActivity" android:screenOrientation="landscape" ></activity>
         <activity android:name=".ReservarActivity"></activity>
         <activity android:name=".ReservacionActivity"></activity>
     </application>

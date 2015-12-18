@@ -19,9 +19,10 @@
         <TextView
             android:id="@+id/txtBienvenida"
             android:textSize="@dimen/size_bienvenida"
+            android:textColor="#666"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/bienvenido"/>
+            android:text="@string/bienvenido"/>
 
         <TextView
             android:id="@+id/txta"
@@ -35,12 +36,18 @@
             android:id="@+id/txtWarique"
             android:gravity="right"
             android:textSize="@dimen/size_Warique"
+            android:text="@string/app_name"
+            android:textColor="#444"
+            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/app_name" />
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btnEntrar"
+            android:textColor="#fff"
+            android:background="#286090"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,6 +55,9 @@
 
         <Button
             android:id="@+id/btnReserva"
+            android:textColor="#fff"
+            android:background="#286090"
+            android:padding="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
