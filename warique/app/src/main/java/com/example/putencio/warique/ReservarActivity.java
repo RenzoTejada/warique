@@ -33,7 +33,7 @@ public class ReservarActivity extends AppCompatActivity {
         txtFecha = (EditText) findViewById(R.id.txtFecha);
 
         int posicion = getIntent().getIntExtra("posicion", -1);
-        lblTexto.setText("Posición->" + posicion);
+        lblTexto.setText("" + posicion);
     }
 
     @Override
