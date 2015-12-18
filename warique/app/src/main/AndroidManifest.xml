@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,15 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListadoActivity"></activity>
-        <activity android:name=".DetalleActivity"></activity>
+        <activity android:name=".DetalleActivity" android:screenOrientation="landscape"></activity>
         <activity android:name=".ReservarActivity"></activity>
         <activity android:name=".ReservacionActivity"></activity>
-        <meta-data
-            android:name="com.parse.APPLICATION_ID"
-            android:value="bHDFiIHZAROTzcbP9cIpPR93KFo6Hqhy9HcfP4Ek" />
-        <meta-data
-            android:name="com.parse.CLIENT_KEY"
-            android:value="4QDc597XlEvkJ7uvyaoiiWngYmkxIWI1a1rLWiRD" />
     </application>
 
 </manifest>

@@ -7,4 +7,7 @@
     <string name="salir">Salir</string>
     <string name="mensaje_validacion">Debe de ingresar todos los campos</string>
     <string name="mensaje_confirmacion">Se realizo la reserva</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="guardar">Guardar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

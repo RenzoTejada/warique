@@ -17,7 +17,7 @@ public class ManagerOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Contantes.TB_RESERVA);
+        db.execSQL(Contantes.CREAR_RESERVA);
     }
 
     @Override

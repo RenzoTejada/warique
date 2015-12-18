@@ -9,7 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.ParseObject;
+import com.example.putencio.aplicacion.Configuracion;
+import com.example.putencio.models.Reserva;
+
 
 /**
  * Created by renzo on 17/12/15.
@@ -18,7 +20,7 @@ public class ReservarActivity extends AppCompatActivity {
 
     private TextView lblTexto;
     private Button btnGuardar, btnAtras;
-    private EditText txtNombre, txtFecha;
+    private EditText txtNombre, txtMensaje;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class ReservarActivity extends AppCompatActivity {
         btnAtras = (Button) findViewById(R.id.btnAtras);
 
         txtNombre = (EditText) findViewById(R.id.txtNombre);
-        txtFecha = (EditText) findViewById(R.id.txtFecha);
+        txtMensaje = (EditText) findViewById(R.id.txtMensaje);
 
         int posicion = getIntent().getIntExtra("posicion", -1);
         lblTexto.setText("" + posicion);
@@ -51,27 +53,25 @@ public class ReservarActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (txtNombre.getText().toString().trim().length() > 0 &&
-                        txtFecha.getText().toString().trim().length() > 0) {
+               if (txtNombre.getText().toString().length() == 0) {
+                    txtNombre.setError("Campo nombre es requerido");
+                } else if (txtMensaje.getText().toString().length() == 0) {
+                    txtMensaje.setError("Campo mensaje es requerido");
+                } else {
+                    Reserva reserva = new Reserva();
+                    reserva.setNombre(txtNombre.getText().toString());
+                    reserva.setMensaje(txtMensaje.getText().toString());
+                    Configuracion.sentenciaSQL.insertaReserva(reserva);
 
-                    ParseObject testObject = new ParseObject("TestObject");
-                    testObject.put("nombre", txtNombre.getText().toString());
-                    testObject.put("fecha", txtFecha.getText().toString());
-                    testObject.put("posicion", lblTexto.getText().toString());
-                    testObject.saveInBackground();
+                    txtNombre.setText("");
+                    txtMensaje.setText("");
                     Toast.makeText(getApplicationContext(),
                             getResources().getString(R.string.mensaje_confirmacion),
                             Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ReservarActivity.this, ReservacionActivity.class);
                     intent.putExtra("nombre", txtNombre.getText().toString());
                     startActivity(intent);
-                }else {
-                    //Si no se han ingresado todos los campos se mostrará un mensaje de validación
-                    Toast.makeText(getApplicationContext(),
-                            getResources().getString(R.string.mensaje_validacion),
-                            Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
