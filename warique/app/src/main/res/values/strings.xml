@@ -5,4 +5,6 @@
     <string name="ver_reserva">Ver Reserva</string>
     <string name="atras">Atras</string>
     <string name="salir">Salir</string>
+    <string name="mensaje_validacion">Debe de ingresar todos los campos</string>
+    <string name="mensaje_confirmacion">Se realizo la reserva</string>
 </resources>
